@@ -1,0 +1,28 @@
+public class Bubble {
+    public static void main(String[] args) {
+        int[] arr = {5, 4, 3, 2, 1};
+        int temp;
+
+        //정렬 전
+        for(int i=0; i<arr.length; i++){
+            System.out.print(arr[i]+" ");
+        }
+        System.out.println();
+
+        //버블정렬 (작은 수 앞으로, 큰 수를 뒤로 보내기)
+        for(int i=0; i<arr.length; i++){//n-1번 반복
+            for(int j=0; j<arr.length-1-i; j++){//n < n+1 비교
+                if(arr[j] > arr[j+1]){
+                    temp = arr[j+1];
+                    arr[j+1] = arr[j];
+                    arr[j] = temp;
+                }
+            }
+        }
+
+        //정렬 후
+        for(int i=0; i<arr.length; i++){
+            System.out.print(arr[i]+" ");
+        }
+    }
+}
