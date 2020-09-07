@@ -1,0 +1,51 @@
+public class test {
+    public static void main(String[] args) {
+        //선택정렬 (오름차순)
+        int[] arr = {5,4,3,2,1};
+        int min;
+        int idx = 0;
+        int ck;
+        for(int i=0; i<arr.length; i++){
+            ck = -1;
+            min = arr[i];
+            for(int j=i+1; j<arr.length; j++){
+                if(arr[j] < min){//min보다 작은 값이 존재하면
+                    min = arr[j];//최소 값 저장
+                    idx = j;//인덱스 값 저장
+                    ck = 1;
+                }
+            }
+            if(ck == 1){//최소값을 찾았다면
+                arr[idx] = arr[i];
+                arr[i] = min;
+            }
+        }
+        //출력
+        for(int i=0; i<arr.length; i++){
+            System.out.print(arr[i]+" ");
+        }
+
+        int max;
+        //선택정렬 (내림차순)
+        for(int i=0; i<arr.length; i++){
+            ck = -1;
+            max = arr[i];
+            for(int j=i+1; j<arr.length; j++){
+                if(arr[j] > max){
+                    idx = j;
+                    max = arr[j];
+                    ck = 1;
+                }
+            }
+            if(ck == 1){
+                arr[idx] = arr[i];
+                arr[i] = max;
+            }
+        }
+        //출력
+        System.out.println();
+        for(int i=0; i<arr.length; i++){
+            System.out.print(arr[i]+" ");
+        }
+    }
+}
