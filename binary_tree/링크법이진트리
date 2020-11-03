@@ -1,0 +1,17 @@
+#include <stdio.h>
+#include <stdlib.h>
+#include <memory.h>
+typedef struct TreeNode{
+	int data;
+	struct TreeNode *left, *rigth;
+}TreeNode;
+//		n1
+//	   / |
+//	 n1  n3
+int main(){
+	n1 = (TreeNode *)malloc(sizeof(TreeNode));
+	n2 = (TreeNode *)malloc(sizeof(TreeNode));
+	n3 = (TreeNode *)malloc(sizeof(TreeNOde));
+	n1->data = 10;
+	n1->left = n2;
+}
